@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Card Creator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🧑‍💼 Profile Card Creator</h1>
+        
+        <!-- Form Input Section -->
+        <form id="profileForm" class="profile-form">
+            <div class="form-group avatar-input">
+                <label for="avatar">Ảnh Avatar:</label>
+                <input type="file" id="avatar" accept="image/*">
+                <img id="avatar-preview" src="./default-avatar.png" alt="Avatar Preview">
+            </div>
+            
+            <div class="form-group">
+                <label for="fullname">Họ và tên:</label>
+                <input type="text" id="fullname" placeholder="Nhập họ và tên">
+            </div>
+            
+            <div class="form-group">
+                <label for="birthdate">Ngày tháng năm sinh:</label>
+                <input type="date" id="birthdate">
+            </div>
+            
+            <div class="form-group">
+                <label>Giới tính:</label>
+                <div class="gender-options">
+                    <div class="gender-option">
+                        <input type="radio" id="male" name="gender" value="Nam" checked>
+                        <label for="male">Nam</label>
+                    </div>
+                    <div class="gender-option">
+                        <input type="radio" id="female" name="gender" value="Nữ">
+                        <label for="female">Nữ</label>
+                    </div>
+                    <div class="gender-option">
+                        <input type="radio" id="other" name="gender" value="Khác">
+                        <label for="other">Khác</label>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label for="address">Địa chỉ:</label>
+                <textarea id="address" rows="3" placeholder="Nhập địa chỉ"></textarea>
+            </div>
+            
+            <div class="form-group">
+                <label for="phone">Số điện thoại:</label>
+                <input type="tel" id="phone" placeholder="Nhập số điện thoại">
+            </div>
+            
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" placeholder="Nhập email">
+            </div>
+            
+            <button type="submit" class="submit-btn">Cập nhật thông tin</button>
+        </form>
+        
+        <!-- Profile Card Section -->
+        <div class="profile-card">
+            <div class="profile-header">
+                <img id="card-avatar" src="./default-avatar.png" alt="Avatar">
+                <h2 id="card-name">Nguyễn Văn A</h2>
+            </div>
+            <div class="profile-info">
+                <div class="info-item">
+                    <span class="info-label">📅 Ngày sinh:</span>
+                    
+
+                    <span id="card-birthdate">01/01/1990</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">⚧️ Giới tính:</span>
+                    <span id="card-gender">Nam</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">🏠 Địa chỉ:</span>
+                    <span id="card-address">123 Đường ABC, Quận XYZ, Thành phố HCM</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">📱 Số điện thoại:</span>
+                    <span id="card-phone">0912345678</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">📧 Email:</span>
+                    <span id="card-email">example@email.com</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
